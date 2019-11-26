@@ -7,11 +7,15 @@ const fetchJSON = async (...args) => {
   return await res.json();
 };
 
+console.log(useSWR)
+
 const App = () => {
   const {data} = useSWR(
     'https://api.github.com/repos/facebook/react',
     fetchJSON,
   );
+
+  
 
   return (
     <View style={styles.container}>
